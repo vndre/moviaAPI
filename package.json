@@ -1,0 +1,29 @@
+{
+  "name": "moviaAPI",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:anskydev/moviaAPI.git",
+  "author": "Ansky",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "apollo-server": "^2.8.1",
+    "apollo-server-koa": "^2.8.1",
+    "graphql": "^14.4.2",
+    "koa": "^2.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "husky": "^3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint --ext .js"
+    }
+  },
+  "engines": {
+    "node": ">=10.16.2"
+  }
+}
