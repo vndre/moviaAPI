@@ -2,7 +2,7 @@ import Koa from 'koa'
 import { ApolloServer } from 'apollo-server-koa'
 import { success } from 'signale'
 import './api/database'
-import schema from './api/graphql'
+import schema from './api/graphql/schema'
 
 const server = new ApolloServer(schema)
 const app = new Koa()
