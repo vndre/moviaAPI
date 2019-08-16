@@ -2,10 +2,11 @@ export default `
   type Actor {
     name: String!,
     birthday: String!,
-    country: String!
+    country: String!,
+    directors: [Director!]!
   }
 
   extend type Query {
-    getActors(limit: Int, name: String): [Actor]!
+    actors(limit: Int, name: String): [Actor!]!
   }
 `
