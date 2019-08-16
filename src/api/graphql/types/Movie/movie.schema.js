@@ -2,10 +2,11 @@ export default `
   type Movie {
     title: String!,
     year: String!,
-    rating: Int!
+    rating: Float!,
+    actors: [Actor!]!
   }
 
   type Query {
-    getMovies(limit: Int, title: String): [Movie]!
+    movies(limit: Int, title: String): [Movie!]!
   }
 `
