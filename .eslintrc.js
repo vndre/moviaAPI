@@ -22,9 +22,11 @@ module.exports = {
   },
   "rules": {
     "no-console": 0,
-    "semi": ["error", "never"],
+    "semi": [2, "never"],
     "import/prefer-default-export": 0,
-    "import/no-unresolved": 0
+    "import/no-unresolved": 0,
+    'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
+    "no-underscore-dangle": 0
   },
   "settings": {
     "import/resolver": {
