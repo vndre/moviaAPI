@@ -6,6 +6,7 @@ module.exports = {
   ],
   "plugins": [
     require.resolve("@babel/plugin-transform-runtime"),
+    require.resolve('@babel/plugin-proposal-export-default-from'),
     [require.resolve("babel-plugin-module-resolver"), {
       "root": [path.resolve("./src")],
       "alias": {
