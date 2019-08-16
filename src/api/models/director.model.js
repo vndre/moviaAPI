@@ -1,7 +1,12 @@
 import { Schema, model } from 'mongoose'
+import nanoid from 'nanoid'
 
 const DirectorSchema = new Schema(
   {
+    _id: {
+      type: String,
+      default: () => nanoid(10),
+    },
     name: {
       type: String,
       required: true,

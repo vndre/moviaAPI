@@ -1,7 +1,12 @@
 import { Schema, model } from 'mongoose'
+import nanoid from 'nanoid'
 
 const ActorSchema = new Schema(
   {
+    _id: {
+      type: String,
+      default: () => nanoid(10),
+    },
     name: {
       type: String,
       required: true,
@@ -14,6 +19,10 @@ const ActorSchema = new Schema(
       type: String,
       required: true,
     },
+    directors: [{
+      type: String,
+      ref: 'Director',
+    }],
   },
 )
 
