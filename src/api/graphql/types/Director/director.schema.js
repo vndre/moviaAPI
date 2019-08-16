@@ -6,6 +6,6 @@ export default `
   }
 
   extend type Query {
-    getDirectors(limit: Int, name: String): [Director]!
+    directors(limit: Int, name: String): [Director!]!
   }
 `
