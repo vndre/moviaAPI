@@ -1,6 +1,7 @@
 export default `
   type Movie {
     title: String!,
+    scoutbase_rating: String!,
     year: String!,
     rating: Float!,
     actors: [Actor!]!
