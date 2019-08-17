@@ -26,7 +26,8 @@ module.exports = {
     "import/prefer-default-export": 0,
     "import/no-unresolved": 0,
     'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
-    "no-underscore-dangle": 0
+    "no-underscore-dangle": 0,
+    "no-bitwise": [2, { "allow": ["~"] }]
   },
   "settings": {
     "import/resolver": {
