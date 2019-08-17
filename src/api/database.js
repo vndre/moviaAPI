@@ -1,6 +1,6 @@
-import mongoose from 'mongoose'
-import { success, debug, fatal } from 'signale'
-import 'dotenv/config'
+const mongoose = require('mongoose')
+const { success, debug, fatal } = require('signale')
+require('dotenv/config')
 
 const { MONGO_URL } = process.env
 
@@ -28,6 +28,6 @@ mongoose.connection.on('error', (error) => {
 
 mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
-  keepAlive: 3000,
-  connectTimeoutMS: 3000,
+  keepAlive: 30000,
+  connectTimeoutMS: 30000,
 })
