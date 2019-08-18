@@ -1,4 +1,4 @@
-import { fatal, success } from 'signale'
+import { success } from 'signale'
 import { Movie, Actor, Director } from '@models'
 
 const movies = [
@@ -138,10 +138,11 @@ const directors = [
   },
 ]
 
-try {
-  Movie.create(movies, () => success('added movies to db'))
-  Actor.create(actors, () => success('added actors to db'))
-  Director.create(directors, () => success('added directors to db'))
-} catch (error) {
-  fatal(error)
+export const populateDB = async () => {
+  await Director.create(directors)
+  success('added directors to db.')
+  await Movie.create(movies)
+  success('added movies to db.')
+  await Actor.create(actors)
+  success('added actors to db.')
 }
