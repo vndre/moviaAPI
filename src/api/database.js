@@ -1,8 +1,10 @@
-const mongoose = require('mongoose')
-const { success, debug, fatal } = require('signale')
-require('dotenv/config')
+import mongoose from 'mongoose'
+import { success, debug, fatal } from 'signale'
+import 'dotenv/config'
 
-const { MONGO_URL } = process.env
+const { MONGO_URL, DEV_MONGO_URL, NODE_ENV } = process.env
+
+const dbUrl = NODE_ENV === 'production' ? MONGO_URL : DEV_MONGO_URL
 
 mongoose.Promise = Promise
 
@@ -26,7 +28,7 @@ mongoose.connection.on('error', (error) => {
   fatal(`Error on MongoDB connection: ${error}`)
 })
 
-mongoose.connect(MONGO_URL, {
+mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   keepAlive: 30000,
   connectTimeoutMS: 30000,
