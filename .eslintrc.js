@@ -6,7 +6,8 @@ module.exports = {
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "extends": [
     "airbnb-base",
@@ -27,7 +28,8 @@ module.exports = {
     "import/no-unresolved": 0,
     'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
     "no-underscore-dangle": 0,
-    "no-bitwise": [2, { "allow": ["~"] }]
+    "no-bitwise": [2, { "allow": ["~"] }],
+    "global-require": 0
   },
   "settings": {
     "import/resolver": {
