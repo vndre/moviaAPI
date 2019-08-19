@@ -9,3 +9,6 @@ v 1.0.2
 
 v 1.0.3
   -- fix GraphQL Playground default url in production
+
+v 1.0.4
+  -- fix readme playground url
