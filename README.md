@@ -1,4 +1,4 @@
-# Movia API🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️ 📼
+# Movia API 🎞️
 
 [public playground](http://moviadb.cerberus.ansky.sh/graphql)
 
