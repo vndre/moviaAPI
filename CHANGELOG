@@ -3,3 +3,6 @@ v 1.0.0
 
 v 1.0.1
   -- update deployment docker configuration
+  
+v 1.0.2
+  -- fix deployment docker configuration
