@@ -12,3 +12,6 @@ v 1.0.3
 
 v 1.0.4
   -- fix readme playground url
+
+v 1.0.5
+  -- add npm script for server
