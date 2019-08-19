@@ -1,14 +1,16 @@
 {
   "name": "moviaAPI",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "repository": "git@github.com:anskydev/moviaAPI.git",
   "author": "Ansky",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js",
-    "test": "mocha --require @babel/register --timeout 60000"
+    "start": "nodemon --exec babel-node src/server.js",
+    "test": "mocha --require @babel/register --timeout 60000",
+    "build": "NODE_ENV=production babel src --out-dir dist",
+    "serve": "node dist/server.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
