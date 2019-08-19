@@ -1,9 +1,15 @@
  {
   "schemaVersion": 2,
   "dockerfileLines": [
-                          "FROM node:10.16.3",
-                          "RUN yarn && yarn cache clean --force",
-                          "ENV NODE_ENV production",
-                          "CMD [ \"yarn\", \"start\" ]"
+                        "FROM node:10.16.3",
+                        "RUN mkdir -p /usr/src/app",
+                        "WORKDIR /usr/src/app",
+                        "COPY ./package.json /usr/src/app/",
+                        "RUN yarn && yarn cache clean --force",
+                        "COPY ./ /usr/src/app",
+                        "ENV NODE_ENV production",
+                        "ENV PORT 4000",
+                        "EXPOSE 4000",
+                        "CMD [ \"yarn\", \"start\" ]"
                       ]
  }
