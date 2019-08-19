@@ -1,2 +1,5 @@
 v 1.0.0
   -- initial release
+
+v 1.0.1
+  -- update deployment docker configuration
