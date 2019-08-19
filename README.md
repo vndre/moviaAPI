@@ -1,6 +1,6 @@
 # Movia API🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️🎞️ 📼
 
-[public playground](http://moviadb.cerberus.ansky.sh)
+[public playground](http://moviadb.cerberus.ansky.sh/graphql)
 
 ## Run locally
 
