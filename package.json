@@ -1,6 +1,6 @@
 {
   "name": "moviaAPI",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "src/server.js",
   "repository": "git@github.com:anskydev/moviaAPI.git",
   "author": "Ansky",
