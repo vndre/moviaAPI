@@ -15,7 +15,7 @@ const playgroundSettings = {
   tabs: [
     {
       endpoint: NODE_ENV === 'production'
-        ? 'f'
+        ? 'http://moviadb.cerberus.ansky.sh'
         : `http://localhost:${port}/graphql`,
       name: 'movies',
       query: '{\n  movies {\n    title \n    actors {\n      name\n    }\n  }\n}',
