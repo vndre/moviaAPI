@@ -6,3 +6,6 @@ v 1.0.1
   
 v 1.0.2
   -- fix deployment docker configuration
+
+v 1.0.3
+  -- fix GraphQL Playground default url in production
