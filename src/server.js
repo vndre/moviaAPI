@@ -8,6 +8,7 @@ import './api/database'
 
 const { JWT_SECRET, NODE_ENV } = process.env
 const port = 4000
+const host = '0.0.0.0'
 const playgroundSettings = {
   settings: {
     'editor.theme': 'dark',
@@ -16,7 +17,7 @@ const playgroundSettings = {
     {
       endpoint: NODE_ENV === 'production'
         ? 'http://moviadb.cerberus.ansky.sh/graphql'
-        : `http://localhost:${port}/graphql`,
+        : `http://${host}:${port}/graphql`,
       name: 'movies',
       query: '{\n  movies {\n    title \n    actors {\n      name\n    }\n  }\n}',
     },
@@ -49,6 +50,6 @@ app.use(jwt({ secret: JWT_SECRET }).unless({ path: server.graphqlPath }))
 
 server.applyMiddleware({ app })
 
-app.listen({ port: 4000 }, () => {
-  success(`🚀 Server ready at http://localhost:${port}${server.graphqlPath}`)
+app.listen({ port: 4000, host }, () => {
+  success(`🚀 Server ready at http://${host}:${port}${server.graphqlPath}`)
 })
